@@ -1,14 +1,22 @@
-import { it, expect } from 'vitest'
-import { sum } from './sum'
+import { describe, it, expect } from 'vitest'
+import { add, sub } from './sum'
 
-it('should sum two numbers', () => {
-	expect( sum(1, 2) ).toBe( 3 )
+describe('tests addition', () => {
+	it('should add two numbers', () => {
+		expect( add(1, 2) ).toBe( 3 )
+	})
+
+	it('should add three numbers', () => {
+		expect( add(1, 2, 3) ).toBe( 6 )
+	})
+
+	it('should add four numbers', () => {
+		expect( add(1, 2, 3, 4) ).toBe( 10 )
+	})
 })
 
-it('should sum three numbers', () => {
-	expect( sum(1, 2, 3) ).toBe( 6 )
-})
-
-it('should sum four numbers', () => {
-	expect( sum(1, 2, 3, 4) ).toBe( 10 )
+describe('tests subtraction', () => {
+	it('should subtract 50 from 100', () => {
+		expect( sub(100, 50) ).toBe(50)
+	})
 })
