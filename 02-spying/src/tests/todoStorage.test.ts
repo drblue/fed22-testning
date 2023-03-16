@@ -30,7 +30,11 @@ describe('save todos', () => {
 		expect(result.success).toBe(true)
 	})
 
-	it.todo('can save a todo and then get it', () => {
-		// localStorage will be empty
+	it('can save a todo and then get it', () => {
+		const result = saveTodos( [ TODO ] )
+		expect(result.success).toBe(true)
+
+		const todos = getTodos()
+		expect(todos).toContainEqual(TODO)
 	})
 })
