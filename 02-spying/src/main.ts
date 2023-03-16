@@ -1,7 +1,7 @@
 import { Todo } from './types/Todo'
 import { addTodo, deleteTodo, toggleTodo } from './functions'
 import { showError, hideError } from './utils/error'
-import { getTodos, saveTodos } from './utils/localStorage'
+import { getTodos, saveTodos } from './utils/todoStorage'
 import { renderTodos } from './utils/render'
 import './assets/scss/main.scss'
 
