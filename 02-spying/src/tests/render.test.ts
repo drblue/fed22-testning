@@ -1,5 +1,5 @@
 import { Window } from 'happy-dom'
-import { afterEach, describe, expect, it, vi } from 'vitest'
+import { afterEach, describe, expect, it } from 'vitest'
 import { transformTodosToHtml } from '../utils/render'
 import dummyTodos from './testdata/todos'
 
