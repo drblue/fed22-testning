@@ -1,10 +1,21 @@
 import { Todo } from '../types/Todo'
 
+// render output to DOM
+export const render = (element: HTMLElement, html: string) => {
+	element.innerHTML = html
+}
+
 // render todos
 export const renderTodos = (todos: Todo[]) => {
-	// replace todosList content
-	const todosEl = document.querySelector<HTMLUListElement>('#todos')!
-	todosEl.innerHTML = todos
+	render(
+		document.querySelector<HTMLUListElement>('#todos')!,
+		transformTodosToHtml(todos)
+	)
+}
+
+// transform todos to HTML(-string)
+export const transformTodosToHtml = (todos: Todo[]) => {
+	return todos
 		.map(todo =>
 			`<li class="list-group-item todo ${todo.completed ? 'completed' : ''}" data-todo-id="${todo.id}">
 				<span class="todo-title">${todo.title}</span>
