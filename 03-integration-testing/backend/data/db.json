@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "🧪 Learn Unit Testing",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "title": "🕵🏻‍♂️ Learn spying on functions",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "title": "📡 Learn API testing",
+      "completed": false
+    },
+    {
+      "id": 4,
+      "title": "🤖 Learn API mocking",
+      "completed": false
+    }
+  ]
+}
