@@ -19,11 +19,6 @@
       "id": 4,
       "title": "🤖 Learn API mocking",
       "completed": false
-    },
-    {
-      "title": "Test todo",
-      "completed": false,
-      "id": 5
     }
   ]
 }
