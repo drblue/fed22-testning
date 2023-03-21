@@ -35,18 +35,21 @@ export const del = async (endpoint: string) => {
 	return res.data
 }
 
-
 /**
  * Get all todos
  */
-export const getTodos = async () => {
-	return get<Todo[]>(`/todos`)
+export const getTodos = () => {
+	return get<Todo[]>('/todos')
+
+	/*
+	const res = await axios.get<Todo[]>(`${BASE_URL}/todos`)
+	return res.data
+	*/
 }
 
 /**
  * Get a single todo
  */
-
 export const getTodo = (id: number) => {
 	return get<Todo>(`/todos/${id}`)
 }
