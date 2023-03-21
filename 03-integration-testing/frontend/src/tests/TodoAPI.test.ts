@@ -3,7 +3,11 @@ import * as TodoAPI from '../services/TodoAPI'
 
 describe('TodoAPI', () => {
 
-	it.todo('should return a list')
+	it('should return a list', async () => {
+		const todos = await TodoAPI.getTodos()
+
+		expect( Array.isArray(todos) ).toBe(true)
+	})
 
 	it.todo('should create a todo')
 
