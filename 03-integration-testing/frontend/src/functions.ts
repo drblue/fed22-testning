@@ -1,4 +1,4 @@
-import { CreateTodoData, Todo } from './types/Todo'
+import { TodoData, Todo } from './types/Todo'
 import { Result } from './types/Result'
 import * as TodoAPI from './services/TodoAPI'
 
@@ -25,7 +25,7 @@ export const addTodo = async (title: string): Promise<Result> => {
 	}
 
 	// create payload
-	const newTodo: CreateTodoData = {
+	const newTodo: TodoData = {
 		title,
 		completed: false,
 	}
