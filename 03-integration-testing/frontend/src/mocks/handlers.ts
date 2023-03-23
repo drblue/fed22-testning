@@ -24,7 +24,7 @@ export const handlers = [
 	// Mock create todo
 	// POST http://localhost:3001/todos
 	rest.post(BASE_URL + '/todos', async (req, res, ctx) => {
-		const payload = await req.json()
+		const payload = await req.json<TodoData>()
 
 		// find next id
 		const id = Math.max( ...dummyTodos.map(todo => todo.id) ) + 1
