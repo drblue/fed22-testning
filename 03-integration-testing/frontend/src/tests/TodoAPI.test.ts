@@ -52,7 +52,6 @@ describe('TodoAPI', () => {
 		expect(todo).toStrictEqual(createdTodo)
 	})
 
-	/*
 	it('should create and then find the todo among all todo', async () => {
 		// create a new todo
 		const todo = await TodoAPI.createTodo(newTodo)
@@ -78,6 +77,7 @@ describe('TodoAPI', () => {
 		})
 	})
 
+	/*
 	it('should create and then delete the todo', async () => {
 		const todo = await TodoAPI.createTodo(newTodo)
 
