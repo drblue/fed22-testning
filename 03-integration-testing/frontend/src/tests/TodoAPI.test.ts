@@ -1,8 +1,8 @@
 import { describe, it, expect } from 'vitest'
 import * as TodoAPI from '../services/TodoAPI'
-import { CreateTodoData } from '../types/Todo'
+import { TodoData } from '../types/Todo'
 
-const newTodo: CreateTodoData = {
+const newTodo: TodoData = {
 	title: 'Test todo',
 	completed: false,
 }
