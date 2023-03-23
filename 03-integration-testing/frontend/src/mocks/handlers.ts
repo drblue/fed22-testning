@@ -11,7 +11,7 @@ const dummyTodos: Todo[] = [
 export const handlers = [
 	// Mock get all todos
 	// GET http://localhost:3001/todos
-	rest.get(BASE_URL + '/todos', (req, res, ctx) => {
+	rest.get(BASE_URL + '/todos', (_req, res, ctx) => {
 		return res(
 			ctx.status(200),
 			ctx.json(dummyTodos)
