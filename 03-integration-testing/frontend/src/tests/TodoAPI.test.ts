@@ -77,7 +77,6 @@ describe('TodoAPI', () => {
 		})
 	})
 
-	/*
 	it('should create and then delete the todo', async () => {
 		const todo = await TodoAPI.createTodo(newTodo)
 
@@ -87,6 +86,5 @@ describe('TodoAPI', () => {
 
 		expect(todos).not.toContainEqual(todo)
 	})
-	*/
 
 })
