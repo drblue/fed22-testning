@@ -31,7 +31,6 @@ describe('TodoAPI', () => {
 		expect( Array.isArray(todos) ).toBe(true)
 	})
 
-	/*
 	it('should create a todo', async () => {
 		const todo = await TodoAPI.createTodo(newTodo)
 
@@ -42,6 +41,7 @@ describe('TodoAPI', () => {
 		})
 	})
 
+	/*
 	it('should create and then get the todo', async () => {
 		// create a new todo
 		const createdTodo = await TodoAPI.createTodo(newTodo)
