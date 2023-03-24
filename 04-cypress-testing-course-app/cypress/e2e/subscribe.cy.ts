@@ -6,7 +6,7 @@ describe('Newsletter Subscribe', () => {
 	const subscribedEmail = 'john@example.com'
 
 	beforeEach(() => {
-		cy.visit('http://localhost:3000')
+		cy.visit('/')
 	})
 
 	it('allows users to subscribe to the email list', () => {
