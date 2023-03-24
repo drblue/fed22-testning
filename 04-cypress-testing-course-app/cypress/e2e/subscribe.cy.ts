@@ -15,4 +15,8 @@ describe('Newsletter Subscribe', () => {
 		cy.getByDataTest('submit-button').click()
 		cy.getByDataTest('success-message').should('exist').contains(email)
 	})
+
+	it.skip('displays an error message when the email is invalid')
+
+	it.skip('should not allow users to subscribe twice')
 })
