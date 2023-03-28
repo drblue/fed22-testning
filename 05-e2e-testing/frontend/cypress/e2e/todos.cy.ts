@@ -32,6 +32,10 @@ describe('Todos', () => {
 			cy.get('#new-todo-title').should('have.value', '')
 		})
 
-		it.skip('can type in the create todo form and then reset the form')
+		it('can type in the create todo form and then reset the form', () => {
+			cy.get('#new-todo-title').type('My ephemeral todo')
+			cy.get('[type="reset"]').click()
+			cy.get('#new-todo-title').should('have.value', '')
+		})
 	})
 })
