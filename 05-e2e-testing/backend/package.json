@@ -1,0 +1,11 @@
+{
+  "name": "05-e2e-testing-backend",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "server": "json-server data/db.json --port 3001 --delay 2000"
+  },
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
