@@ -14,7 +14,11 @@ describe('Todos', () => {
 			cy.get('#new-todo-title').should('have.value', '')
 		})
 
-		it.skip('cant create a todo without a title')
+		it('cant create a todo without a title', () => {
+			// cy.get('#new-todo-title').type('{enter}')
+			cy.get('[type="submit"]').click()
+			cy.get('#error').should('be.visible').contains('Title cannot be empty')
+		})
 
 		it.skip('can create a new todo (and see it in the list and clears input)')
 
