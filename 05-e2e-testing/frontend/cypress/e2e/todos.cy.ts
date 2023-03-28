@@ -3,10 +3,16 @@ describe('Todos', () => {
 		cy.visit('/')
 	})
 
-	it('should see at least one todo', { defaultCommandTimeout: 6000 }, () => {
-		cy.get('#todos')
-			.find('li')
-			.should('have.length.at.least', 1)
+	context('initial state', () => {
+		it('should see at least one todo', { defaultCommandTimeout: 6000 }, () => {
+			cy.get('#todos')
+				.find('li')
+				.should('have.length.at.least', 1)
+		})
+
+		it('should not show the error dialog', () => {
+			cy.get('#error').should('not.be.visible')
+		})
 	})
 
 	context('create todo', () => {
