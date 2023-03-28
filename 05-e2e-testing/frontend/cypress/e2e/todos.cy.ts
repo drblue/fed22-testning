@@ -20,7 +20,17 @@ describe('Todos', () => {
 			cy.get('#error').should('be.visible').contains('Title cannot be empty')
 		})
 
-		it.skip('can create a new todo (and see it in the list and clears input)')
+		it('can create a new todo (and see it in the list and clears input)', () => {
+			// enter todo title and submit form
+			cy.get('#new-todo-title').type('My test todo')
+			cy.get('[type="submit"]').click()
+
+			// check that a todo with the title exists in the list
+			cy.get('#todos').find('li').last().contains('My test todo')
+
+			// expect input to be empty
+			cy.get('#new-todo-title').should('have.value', '')
+		})
 
 		it.skip('can type in the create todo form and then reset the form')
 	})
